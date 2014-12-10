@@ -1,4 +1,9 @@
-Revision history for SHARYANTO-Proc-Daemon-Prefork
+Revision history for Proc-Daemon-Prefork
+
+0.70    2014-12-11 (PERLANCAR) (unreleased)
+
+        - Rename dist from {SHARYANTO-,}Proc-Daemon-Prefork.
+
 
 0.69    2014-04-05 (SHARYANTO)
 

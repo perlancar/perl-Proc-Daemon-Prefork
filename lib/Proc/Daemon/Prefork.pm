@@ -1,4 +1,7 @@
-package SHARYANTO::Proc::Daemon::Prefork;
+package Proc::Daemon::Prefork;
+
+# DATE
+# VERSION
 
 use 5.010001;
 use strict;
@@ -10,8 +13,6 @@ use FindBin;
 use IO::Select;
 use POSIX;
 use Symbol;
-
-# VERSION
 
 # --- globals
 
@@ -705,10 +706,5 @@ daemon. You usually do this in your main loop routine:
 Run before killing children and shutting down.
 
 =back
-
-
-=head1 SEE ALSO
-
-L<SHARYANTO>
 
 =cut
