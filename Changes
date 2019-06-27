@@ -1,3 +1,9 @@
+0.710   2019-06-27 (PERLANCAR)
+
+	- Accept error_log_handle & access_log_handle as alternatives to
+	  specifying error_log_path & access_log_path.
+
+
 0.70    2014-12-11 (PERLANCAR)
 
         - Rename dist from {SHARYANTO-,}Proc-Daemon-Prefork.
