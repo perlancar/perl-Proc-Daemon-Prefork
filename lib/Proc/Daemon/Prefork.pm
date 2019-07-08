@@ -124,6 +124,10 @@ sub close_logs {
 sub daemonize {
     my ($self) = @_;
 
+    if ($self->{before_daemonize} && !$self->{before_daemonize}->()) {
+        die "Failed initializing before daemonizing, exiting ...\n";
+    }
+
     local *ERROR_LOG;
     $self->open_logs;
     *ERROR_LOG = $self->{_error_log};
@@ -694,6 +698,11 @@ needs to communicate with children.
 In seconds.
 
 =item * auto_reload_handler => CODEREF (required if auto_reload_check_every is set)
+
+=item * before_daemonize => CODEREF (default none)
+
+Run code before daemonizing. If code returns false, will abort daemonizing and
+exit with non-zero status (1).
 
 =item * after_init => CODEREF (default none)
 
