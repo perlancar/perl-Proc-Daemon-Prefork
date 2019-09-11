@@ -742,6 +742,23 @@ daemon. You usually do this in your main loop routine:
 
 Run before killing children and shutting down.
 
+=item * before_daemonize => CODEREF
+
 =back
+
+
+=head1 HOOK TIMELINE
+
+ (run)
+
+ before_daemonize
+
+ (daemonize) | <-- (init)
+
+ after_init
+
+ (prefork)
+
+ on_client_disconnect | <-- (main loop)
 
 =cut
